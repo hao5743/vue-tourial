@@ -1,7 +1,7 @@
 ## 计算属性
 模板内的表达式是非常便利的，但是它们实际上只用于简单的运算。在模板中放入太多的逻辑会让模板过重且难以维护，此时应当使用`计算属性`。
 
-## 基本例子
+### 基本例子
 
 ```html
 <div id="example">
@@ -28,7 +28,7 @@ var vm = new Vue({
 
 你可以像绑定普通属性一样在模板中绑定计算属性。 Vue 知道 vm.reversedMessage 依赖于 vm.message ，因此当 vm.message 发生改变时，所有依赖于 vm.reversedMessage 的绑定也会更新
 
-## 计算属性 vs Methods
+### 计算属性 vs Methods
 
 ```html
 <p>Reversed message: "{{ reversedMessage() }}"</p>
@@ -45,7 +45,7 @@ methods: {
 可以将reversedMessage定义成method而不是计算属性，两种方式结果相同。
 不同点：计算属性是有缓存的，当所依赖的数据未变化时，他不会重新求值，提高效率。
 
-## 计算属性 vs watched属性
+### 计算属性 vs watched属性
 
 Vue 确实提供了一种更通用的方式来观察和响应 Vue 实例上的数据变动：watch 属性
 
@@ -90,7 +90,7 @@ var vm = new Vue({
 ```
 
 
-## 观察watchers
+### 观察watchers
 
 当你想要在数据变化响应时，执行异步操作或开销较大的操作，使用watch选项
 
